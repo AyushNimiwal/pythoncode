@@ -1,0 +1,187 @@
+WindowManager:
+    MainWindow:
+    SecondWindow:
+    ThirdWindow:
+    ForthWindow:
+<MainWindow>:
+    name: "main"
+    Image:
+        source:"C://Users//ayush//PycharmProjects//pythonProject//pro.png"
+        pos_hint:{"center_x":0.5,"center_y":0.7}
+        size_hint_x:None
+        width:400
+    Button:
+        text: "Employee"
+        size_hint:0.2,0.1
+        background_color: (255,0, 0,.675)
+        pos_hint:{"center_x":0.38,"center_y":0.4}
+        on_release:
+            app.root.current = "second"
+            root.manager.transition.direction = "left"
+    Button:
+        text: "Admin"
+        size_hint:0.2,0.1
+        background_color: (255,0, 0,.675)
+        pos_hint:{"center_x":0.8,"center_y":0.1}
+        on_release:
+            app.root.current = "third"
+            root.manager.transition.direction = "left"
+    Button:
+        text: "Manager"
+        size_hint:0.2,0.1
+        background_color: (255,0, 0,.675)
+        pos_hint:{"center_x":0.62,"center_y":0.4}
+        on_release:
+            app.root.current = "forth"
+            root.manager.transition.direction = "left"
+
+
+<SecondWindow>:
+    name: "second"
+    Image:
+        source:"C://Users//ayush//PycharmProjects//pythonProject//pro.png"
+        pos_hint:{"center_x":0.5,"center_y":0.75}
+        size_hint_x:None
+        width:250
+    Label:
+        text:"User ID"
+        pos_hint:{"center_x":0.38,"center_y":0.5}
+        halign:"center"
+        theme_text_color:"Primary"
+
+    TextInput:
+        id:"User ID"
+        pos_hint:{"center_x":0.55,"center_y":0.5}
+        background_color: (212,175,55,.675)
+        size_hint:(.25,.08)
+        multiline: False
+        width:200
+    Label:
+        text:"Password"
+        pos_hint:{"center_x":0.38,"center_y":0.38}
+        halign:"center"
+        theme_text_color:"Primary"
+
+    TextInput:
+        id:"password"
+        pos_hint:{"center_x":0.55,"center_y":0.38}
+        background_color: (212,175,55,.675)
+        size_hint:(.25,.08)
+        multiline: False
+        width:200
+    Button:
+        text: "Submit"
+        size_hint:0.15,0.07
+        pos_hint:{"center_x":0.55,"center_y":0.25}
+        background_color: (255,0, 0,.675)
+        on_press:
+            app.root.current = "main"
+            root.manager.transition.direction = "left"
+
+    Button:
+        text: "Go Back"
+        size_hint:0.15,0.07
+        pos_hint:{"center_x":0.9,"center_y":0.1}
+        background_color: (255,0, 0,.675)
+        on_release:
+            app.root.current = "main"
+            root.manager.transition.direction = "right"
+
+<ThirdWindow>:
+    name: "third"
+    Image:
+        source:"C://Users//ayush//PycharmProjects//pythonProject//pro.png"
+        pos_hint:{"center_x":0.5,"center_y":0.75}
+        size_hint_x:None
+        width:250
+    Label:
+        text:"User ID"
+        pos_hint:{"center_x":0.38,"center_y":0.5}
+        halign:"center"
+        theme_text_color:"Primary"
+
+    TextInput:
+        id:"User ID"
+        pos_hint:{"center_x":0.55,"center_y":0.5}
+        background_color: (212,175,55,.675)
+        size_hint:(.25,.08)
+        multiline: False
+        width:200
+    Label:
+        text:"Password"
+        pos_hint:{"center_x":0.38,"center_y":0.38}
+        halign:"center"
+        theme_text_color:"Primary"
+
+    TextInput:
+        id:"Password"
+        pos_hint:{"center_x":0.55,"center_y":0.38}
+        background_color: (212,175,55,.675)
+        size_hint:(.25,.08)
+        multiline: False
+        width:200
+    Button:
+        text: "Submit"
+        size_hint:0.15,0.07
+        pos_hint:{"center_x":0.55,"center_y":0.25}
+        background_color: (255,0, 0,.675)
+        on_release:
+            app.root.current = "third"
+            root.manager.transition.direction = "left"
+    Button:
+        text: "Go Back"
+        size_hint:0.15,0.07
+        pos_hint:{"center_x":0.9,"center_y":0.1}
+        background_color: (255,0, 0,.675)
+        on_release:
+            app.root.current = "main"
+            root.manager.transition.direction = "right"
+<ForthWindow>:
+    name: "forth"
+    Image:
+        source:"C://Users//ayush//PycharmProjects//pythonProject//pro.png"
+        pos_hint:{"center_x":0.5,"center_y":0.75}
+        size_hint_x:None
+        width:250
+    Label:
+        text:"User ID"
+        pos_hint:{"center_x":0.38,"center_y":0.5}
+        halign:"center"
+        theme_text_color:"Primary"
+
+    TextInput:
+        id:"User ID"
+        pos_hint:{"center_x":0.55,"center_y":0.5}
+        background_color: (212,175,55,.675)
+        size_hint:(.25,.08)
+        multiline: False
+        width:200
+    Label:
+        text:"Password"
+        pos_hint:{"center_x":0.38,"center_y":0.38}
+        halign:"center"
+        theme_text_color:"Primary"
+
+    TextInput:
+        id:"Password"
+        pos_hint:{"center_x":0.55,"center_y":0.38}
+        background_color: (212,175,55,.675)
+        size_hint:(.25,.08)
+        multiline: False
+        width:200
+    Button:
+        text: "Submit"
+        size_hint:0.15,0.07
+        pos_hint:{"center_x":0.55,"center_y":0.25}
+        background_color: (255,0, 0,.675)
+        on_release:
+            app.root.current = "third"
+            root.manager.transition.direction = "left"
+    Button:
+        text: "Go Back"
+        size_hint:0.15,0.07
+        pos_hint:{"center_x":0.9,"center_y":0.1}
+        background_color: (255,0, 0,.675)
+        on_release:
+            app.root.current = "main"
+            root.manager.transition.direction = "right"
